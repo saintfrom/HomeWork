@@ -80,9 +80,11 @@ namespace HomeWork2
 
         }
 
-        static User GetUser(int number);
+        static User GetUser(int number)
         {
-        var result = new User();
+            var result = new User();
+
+            return result;
         }
     }
 }
