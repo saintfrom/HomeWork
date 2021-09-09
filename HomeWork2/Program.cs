@@ -10,6 +10,10 @@ namespace HomeWork2
     {
         public string Name { get; set; }
     }
+    public class Ball
+    { 
+        public int Grade { get; set; }
+    }
     class Program
     {
         static void Main(string[] args)
@@ -76,6 +80,11 @@ namespace HomeWork2
             #endregion
 
             var user1 = GetUser(1);
+            var ball1 = GetBall(1);
+            var user2 = GetUser(2);
+            var ball2 = GetBall(2);
+            var user3 = GetUser(3);
+            var ball3 = GetBall(3);
 
 
         }
@@ -83,8 +92,17 @@ namespace HomeWork2
         static User GetUser(int number)
         {
             var result = new User();
+            Console.WriteLine($"Введите имя пользователя {number} и нажмите Enter");
+            result.Name = Console.ReadLine();
 
             return result;
+        }
+        static Ball GetBall(int chislo)
+        {
+            var res = new Ball();
+            Console.WriteLine($"Введите балл по русскому {chislo}");
+            res.Grade = Convert.ToInt32(Console.ReadLine());
+            return res;
         }
     }
 }
